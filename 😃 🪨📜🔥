@@ -1,0 +1,90 @@
+import random
+
+# UserChoiceS DICTIONARY 
+UserChoices = {"s":"stone 🪨",
+"p":"paper 📜",
+"sc":"scissors ✂️",
+"f":"fire 🔥"
+}
+
+
+
+# the loop
+run = True
+while run:
+
+        #CHOISE AN ELEMENT
+        UserChoice = input("Choice one ELEMENT beetwen  stone 🪨 (s), paper 📜 (p), scissors ✂️ (sc) or fire 🔥 (f) : ")
+        def choice(UserChoice):
+                if UserChoice=="s":
+                        UserChoice="stone 🪨"
+                elif UserChoice=="p":
+                        UserChoice="paper 📜"
+                elif UserChoice=="sc":
+                        UserChoice="scissors ✂️" 
+                elif UserChoice=="f":
+                        UserChoice="fire 🔥"
+                else:
+                        UserChoice!=True
+                        print("Not valid UserChoice")    
+                return UserChoice
+
+
+        print(choice(UserChoice))
+
+        #AUTOMATIC RESPONSE
+        response=random.choice(list(UserChoices.values()))
+
+        print(response)
+
+        #VALUES 😉😃🚀🌟🙈
+
+        tie="tie 🙈🙈"
+        win="you won 😃🚀🌟"
+        lose="the next will be better 😉 "
+
+        #If you choice "s" = stone 🪨
+
+
+        if UserChoice =="s" and response =="stone 🪨":
+                print(tie)
+        elif UserChoice =="s" and response =="paper 📜":
+                print(lose)
+                
+        elif UserChoice =="s" and response =="scissors ✂️":
+                print(win)
+        elif UserChoice =="s" and response =="fire 🔥":
+                print(win)
+
+        #If you choice "p" = paper 📜
+
+        if UserChoice =="p" and response =="stone 🪨":
+                print(win)
+        elif UserChoice =="p" and response =="paper 📜":
+                print(tie)
+        elif UserChoice =="p" and response =="scissors ✂️":
+                print(lose)
+        elif UserChoice =="p" and response =="fire 🔥":
+                print(lose)
+
+        #If you choice "sc" = scissors ✂️
+
+        if UserChoice =="sc" and response =="stone 🪨":
+                print(lose)
+        elif UserChoice =="sc" and response =="paper 📜":
+                print(win)
+        elif UserChoice =="sc" and response =="scissors ✂️":
+                print(tie)
+        elif UserChoice =="sc" and response =="fire 🔥":
+                print(lose)
+        
+        #If you choice "f" =  fire 🔥
+
+        if UserChoice =="f" and response =="stone 🪨":
+                print(lose)
+        elif UserChoice =="f" and response =="paper 📜":
+                print(win)
+        elif UserChoice =="f" and response =="scissors ✂️":
+                print(win)
+        elif UserChoice =="f" and response =="fire 🔥":
+                print(tie)
